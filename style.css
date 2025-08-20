@@ -1,1 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    font-family: Roboto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 182, 246);
+}
+
+.page-container {
+    display: grid;
+    grid-template-rows: 0.5fr 2fr;
+}
+
+h1 { 
+    grid-row: 1 / 2;
+    color: white;
+    text-shadow: 0 0 10px rgb(248, 12, 209);
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 80px;
+    margin-bottom: 60px;
+}
+
+.grid-container {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+}
+
+.grid-item {
+    display: flex;
+    border: 1px solid white;
+    color: white;
+    font-size: 80px;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container > div:first-child, .grid-container > div:nth-child(4),
+.grid-container > div:nth-child(7) {
+    border-left: 0px solid white;
+}
+
+.grid-container > div:first-child, .grid-container > div:nth-child(2),
+.grid-container > div:nth-child(3) {
+    border-top: 0px solid white;
+}
+
+.grid-container > div:nth-child(3), .grid-container > div:nth-child(6),
+.grid-container > div:nth-child(9) {
+    border-right: 0px solid white;
+}
+
+.grid-container > div:nth-child(7), .grid-container > div:nth-child(8),
+.grid-container > div:nth-child(9) {
+    border-bottom: 0px solid white;
+}
+
+.x-marker {
+    text-shadow: 0 0 10px rgb(248, 12, 209);
+}
+
+.o-marker {
+    text-shadow: 0 0 10px rgb(12, 248, 248);
+}
